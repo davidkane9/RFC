@@ -4,6 +4,11 @@
 library(tidyverse)
 library(janitor)
 
+# We don't have time in class to look at all this data. Make sure to check out
+# the code book as you work on your submission for the challenge.
+
+# https://nij.ojp.gov/funding/recidivism-forecasting-challenge-appendix-2-codebook.pdf
+
 x <- read_csv("raw_data/NIJ_s_Recidivism_Challenge_Training_Dataset.csv",
               col_types = cols(ID = col_integer(),
                                Gender = col_character(),
@@ -61,14 +66,31 @@ x <- read_csv("raw_data/NIJ_s_Recidivism_Challenge_Training_Dataset.csv",
   clean_names() %>% 
   rename(age = age_at_release,
          sup_score = supervision_risk_score_first) %>% 
+  
+  # No real need to make all the variables factors. I just did so to make the
+  # initial data exploration in class easier.
+  
   mutate(race = parse_factor(race)) %>% 
   mutate(gender = parse_factor(gender)) %>% 
+  
+  # Should we make age an ordered factor? Maybe? There is certainly a natural
+  # ordering to age. Indeed, we might even replace these categories with their
+  # mid-points so that age could be numeric.
+  
   mutate(age = parse_factor(age, 
                             levels = c("18-22", "23-27", "28-32",
                                        "33-37", "38-42", "43-47",
                                        "48 or older"))) %>% 
   mutate(age = fct_recode(age, "48+" = "48 or older")) %>% 
+  
+  # There are serveral different outcome variables. For class, we will just look
+  # at the total recidivism for the entire three years of follow up. Changing it
+  # to 0/1 makes the modeling we do easier.
+  
   mutate(recidivist = ifelse(recidivism_within_3years, 1, 0)) %>% 
+  
+  # Again, we are just looking at a handful of the variables in class today.
+  
   select(id, recidivist, gender, age, race, sup_score)
 
 
