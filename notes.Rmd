@@ -1,12 +1,13 @@
 ---
-title: "Class Notes for 2021-05-12"
-author: "David Kane"
 output: html_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
+
+
+### Class Notes for 2021-05-12
 
 Fork/clone our repo: https://github.com/davidkane9/RFC
 
@@ -22,4 +23,8 @@ Background readings:
 women](https://www.reuters.com/article/us-amazon-com-jobsautomation-
 insight-idUSKCN1MK08G)."  Reuters.
 
+Other links:
 
+* Good issue of R Weekly from [Monday](https://rweekly.org/#RWeekly2021-W19map-walk-pivot,centrelperk,ShinyDevSeries).
+
+* Please pass along to your high school friends: [Kane’s Free High School Data Science Bootcamp](https://bootcamp.davidkane.info/).
