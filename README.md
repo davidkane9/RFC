@@ -1,2 +1,8 @@
-# RFC
-Recidivism Forecasting Challenge
+# Recidivism Forecasting Challenge
+
+This repo contains data and code associated with the National Institute of Justice’s (NIJ) “Recidivism Forecasting Challenge.” Read more about the challenge [here](https://data.ojp.usdoj.gov/stories/s/NIJ-s-Recidivism-Challenge-Overview-and-Term-of-Us/gyxv-98b2/). For problem set #6, all students will make an individual submission to the contest. Details:
+
+> The Challenge uses data on roughly 26,000 individuals from the State of Georgia released from Georgia prisons on discretionary parole to the custody of the Georgia Department of Community Supervision (GDCS) for the purpose of post-incarceration supervision between January 1, 2013 and December 31, 2015. This dataset is split into two sets, training and test. We used a 70/30 split, indicating that 70% of the data is in the training dataset and 30% in the test dataset. The training dataset includes the four dichotomous dependent variables measuring if an individual recidivated in the three-year follow-up period (yes/no) as well as recidivated by time period (year 1, year 2, or year 3). Recidivism is measured as an arrest for a new felony or misdemeanor crime within three years of the supervision start date. The test dataset does not include the four dependent variables. The initial test dataset will include all individuals selected in the 30% test dataset. After the first Challenge period (forecasting the probability individuals recidivated year 1) concludes, a second test dataset will be released containing only those individuals that did not recidivate year 1.
+
+Students will also submit their work to Gradescope, as with any other problem set.
+
